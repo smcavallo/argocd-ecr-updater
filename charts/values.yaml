@@ -1,0 +1,72 @@
+## number of instances
+##
+replicaCount: 1
+
+## restart policy for all containers
+##
+restartPolicy: Always
+
+image:
+  repository: smcavallo/argocd-ecr-updater # CHANGE_ME - there is currently no published image
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecret: ""
+
+# Required in order to update argocd repository secret
+env:
+  ARGOCD_REPO_SECRET_NAME: default # CHANGE_ME
+
+# Recommended to use pod-iam
+serviceAccount:
+  create: true
+  annotations: {}
+#    eks.amazonaws.com/role-arn: "arn:aws:iam::1234567890:role/argocd-ecr-updater-iam-role"
+
+## Set enabled to false if you don't want securityContext
+## in your Deployment.
+## The below values are the default for kubernetes.
+## Openshift won't deploy with runAsUser: 1000 without additional permissions.
+securityContext:
+  enabled: true  # Should be set to false when running on OpenShift
+  runAsUser: 1000
+
+resources: {}
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+priorityClassName: ""
+
+nodeSelector: {}
+#  kubernetes.io/os: linux
+#  kubernetes.io/arch: amd64
+
+tolerations: {}
+
+podAnnotations: {}
+#  sidecar.istio.io/inject: "false"
+#  prometheus.io/scrape: "true"
+#  prometheus.io/path: "metrics"
+#  prometheus.io/port: "8080"
+
+service:
+  httpPort: "8080"
+
+affinity: {}
+
+## The name of a secret in the same kubernetes namespace which contain values to be added to the environment
+envFromSecret: ""
+
+extraEnvSecrets: {}
+
+# A list of secrets and their paths to mount inside the pod
+# This is useful for mounting certificates for security
+secretMounts: []
+
+# Creates a PodSecurityPolicy and the role/rolebinding
+# allowing the serviceaccount to use it
+podSecurityPolicies:
+  enabled: true

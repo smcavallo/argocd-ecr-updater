@@ -1,0 +1,22 @@
+{{- if .Values.podSecurityPolicies.enabled -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ template "argocd-ecr-updater.fullname" . }}
+  labels:
+    chart: {{ template "argocd-ecr-updater.chart" . }}
+    app: {{ template "argocd-ecr-updater.name" . }}
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+rules:
+- apiGroups: ['extensions']
+  resources: ['podsecuritypolicies']
+  verbs:     ['use']
+  resourceNames:
+  - {{ template "argocd-ecr-updater.fullname" . }}
+- apiGroups:
+  - ""
+  resources:
+    - secrets
+  verbs: ["get", "watch", "update", "patch"]
+{{- end }}

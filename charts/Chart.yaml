@@ -1,0 +1,5 @@
+# https://github.com/smcavallo/argocd-ecr-updater
+name: argocd-ecr-updater
+description: ArgoCD ECR Repository Token Refresher
+version: 0.1.0
+apiVersion: v2
