@@ -13,6 +13,7 @@ from prometheus_client import generate_latest, REGISTRY, Gauge, Counter
 ARGOCD_ECR_UPDATER_SYNC_CRON = os.getenv('ARGOCD_ECR_UPDATER_SYNC_CRON', '0 */12 * * *')
 ARGOCD_REPO_SECRET_NAME = os.getenv('ARGOCD_REPO_SECRET_NAME', None)
 ARGOCD_ECR_REGISTRY = os.getenv('ARGOCD_ECR_REGISTRY', None)
+ARGOCD_ECR_ROLE_ARN = os.getenv('ARGOCD_ECR_ROLE_ARN', None)
 
 # PROMETHEUS METRICS
 CREDENTIAL_FAILURE = Counter('argocd_ecr_updater_aws_cred_failure_total', 'Failed Aws Credentials')
@@ -56,10 +57,22 @@ def sync():
 if ARGOCD_REPO_SECRET_NAME is None:
     raise ValueError('Specify name of secret in env variable ARGOCD_REPO_SECRET_NAME')
 
+def get_session():
+    """
+    Assumes a role arn if exists, otherwise returns a new session
+    """
+    if ARGOCD_ECR_ROLE_ARN is not None:
+        client = boto3.client('sts')
+        response = client.assume_role(RoleArn=ARGOCD_ECR_ROLE_ARN, RoleSessionName='argocd-ecr-updater')
+        return boto3.session.Session(aws_access_key_id=response['Credentials']['AccessKeyId'],
+                        aws_secret_access_key=response['Credentials']['SecretAccessKey'],
+                        aws_session_token=response['Credentials']['SessionToken'])
+    return boto3.session.Session()
+
 
 def get_ecr_client():
     try:
-        session = boto3.session.Session()
+        session = get_session()
         aws_client = session.client(
             service_name='ecr'
         )
