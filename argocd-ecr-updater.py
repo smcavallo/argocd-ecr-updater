@@ -8,7 +8,6 @@ from bottle import route, run, template, response
 from kubernetes import client, config
 from prometheus_client import generate_latest, REGISTRY, Gauge, Counter
 
-
 # CONFIGURATION
 ARGOCD_ECR_UPDATER_SYNC_CRON = os.getenv('ARGOCD_ECR_UPDATER_SYNC_CRON', '0 */12 * * *')
 ARGOCD_REPO_SECRET_NAME = os.getenv('ARGOCD_REPO_SECRET_NAME', None)
@@ -57,6 +56,7 @@ def sync():
 if ARGOCD_REPO_SECRET_NAME is None:
     raise ValueError('Specify name of secret in env variable ARGOCD_REPO_SECRET_NAME')
 
+
 def get_session():
     """
     Assumes a role arn if exists, otherwise returns a new session
@@ -65,8 +65,8 @@ def get_session():
         client = boto3.client('sts')
         response = client.assume_role(RoleArn=ARGOCD_ECR_ROLE_ARN, RoleSessionName='argocd-ecr-updater')
         return boto3.session.Session(aws_access_key_id=response['Credentials']['AccessKeyId'],
-                        aws_secret_access_key=response['Credentials']['SecretAccessKey'],
-                        aws_session_token=response['Credentials']['SessionToken'])
+                                     aws_secret_access_key=response['Credentials']['SecretAccessKey'],
+                                     aws_session_token=response['Credentials']['SessionToken'])
     return boto3.session.Session()
 
 
@@ -87,18 +87,25 @@ def get_ecr_client():
 
 def get_ecr_login():
     client = get_ecr_client()
-    # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecr.html#ECR.Client.get_authorization_token
-    # Optionally provide registryIds, else the default registry will be used
-    if ARGOCD_ECR_REGISTRY is not None:
-        response = client.get_authorization_token(registryIds=[ARGOCD_ECR_REGISTRY])
-    else:
-        response = client.get_authorization_token()
-    token = response['authorizationData'][0]['authorizationToken']
-    print("New ecr authorizationToken expiresAt " + response['authorizationData'][0]['expiresAt'].strftime("%m/%d/%Y, %H:%M:%S"))
-    decoded_token = base64.b64decode(token).decode('utf-8')
-    registry_username = decoded_token.split(':')[0]
-    registry_password = decoded_token.split(':')[1]
-    return registry_username, registry_password
+    try:
+        # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ecr.html#ECR.Client.get_authorization_token
+        # Optionally provide registryIds, else the default registry will be used
+        if ARGOCD_ECR_REGISTRY is not None:
+            response = client.get_authorization_token(registryIds=[ARGOCD_ECR_REGISTRY])
+        else:
+            response = client.get_authorization_token()
+        token = response['authorizationData'][0]['authorizationToken']
+        print("New ecr authorizationToken expiresAt " + response['authorizationData'][0]['expiresAt'].strftime(
+            "%m/%d/%Y, %H:%M:%S"))
+        decoded_token = base64.b64decode(token).decode('utf-8')
+        registry_username = decoded_token.split(':')[0]
+        registry_password = decoded_token.split(':')[1]
+        return registry_username, registry_password
+    except client.exceptions.InvalidIdentityTokenException as e:
+        print(str(e))
+        # If this occurs, just restart the pod
+        # https://aws.amazon.com/premiumsupport/knowledge-center/iam-sts-invalididentitytoken/
+        sys.exit(n)
 
 
 def run_update_job():
@@ -121,9 +128,9 @@ def run_update_job():
 
     # Create a json patch
     body = {
-                'data': {
-                    'password': ecr_password_base64
-            }
+        'data': {
+            'password': ecr_password_base64
+        }
     }
     print("Updating Secret " + ARGOCD_REPO_SECRET_NAME)
     try:
