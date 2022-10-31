@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e68a30fb9257b138c87344203a904e5c98294353951833ac59acffde64009f38"
+            "sha256": "e92893d90085b9626e66beb433ec36a10b037a432cf97d4787864239bfc7fd8a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -98,11 +98,11 @@
         },
         "kubernetes": {
             "hashes": [
-                "sha256:9900f12ae92007533247167d14cdee949cd8c7721f88b4a7da5f5351da3834cd",
-                "sha256:da19d58865cf903a8c7b9c3691a2e6315d583a98f0659964656dfdf645bf7e49"
+                "sha256:213befbb4e5aed95f94950c7eed0c2322fc5a2f8f40932e58d28fdd42d90836c",
+                "sha256:eb42333dad0bb5caf4e66460c6a4a1a36f0f057a040f35018f6c05a699baed86"
             ],
             "index": "pypi",
-            "version": "==24.2.0"
+            "version": "==25.3.0"
         },
         "oauthlib": {
             "hashes": [
@@ -275,11 +275,11 @@
         },
         "tzdata": {
             "hashes": [
-                "sha256:323161b22b7802fdc78f20ca5f6073639c64f1a7227c40cd3e19fd1d0ce6650a",
-                "sha256:e15b2b3005e2546108af42a0eb4ccab4d9e225e2dfbf4f77aad50c70a4b1f3ab"
+                "sha256:04a680bdc5b15750c39c12a448885a51134a27ec9af83667663f0b3a1bf3f342",
+                "sha256:91f11db4503385928c15598c98573e3af07e7229181bee5375bd30f1695ddcae"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2022.5"
+            "version": "==2022.6"
         },
         "tzlocal": {
             "hashes": [
