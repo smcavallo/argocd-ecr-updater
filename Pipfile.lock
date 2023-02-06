@@ -18,11 +18,11 @@
     "default": {
         "apscheduler": {
             "hashes": [
-                "sha256:b2bea0309569da53a7261bfa0ce19c67ddbfe151bda776a6a907579fdbd3eb2a",
-                "sha256:c8c618241dbb2785ed5a687504b14cb1851d6f7b5a4edf3a51e39cc6a069967a"
+                "sha256:575299f20073c60a2cc9d4fa5906024cdde33c5c0ce6087c4e3c14be3b50fdd4",
+                "sha256:a49fc23269218416f0e41890eea7a75ed6b284f10630dcfe866ab659621a3696"
             ],
             "index": "pypi",
-            "version": "==3.9.1.post1"
+            "version": "==3.10.0"
         },
         "boto3": {
             "hashes": [
