@@ -1,4 +1,3 @@
-{{- if .Values.podSecurityPolicies.enabled }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -38,4 +37,3 @@ subjects:
 - kind: ServiceAccount
   name: {{ template "argocd-ecr-updater.fullname" . }}
   namespace: {{ .Release.Namespace }}
-{{- end }}

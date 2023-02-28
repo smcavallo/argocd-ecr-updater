@@ -65,8 +65,3 @@ extraEnvSecrets: {}
 # A list of secrets and their paths to mount inside the pod
 # This is useful for mounting certificates for security
 secretMounts: []
-
-# Creates a PodSecurityPolicy and the role/rolebinding
-# allowing the serviceaccount to use it
-podSecurityPolicies:
-  enabled: true
