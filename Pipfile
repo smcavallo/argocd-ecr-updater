@@ -8,7 +8,7 @@ boto3 = "==1.26.79"
 bottle = "==0.12.25"
 kubernetes = "==26.1.0"
 prometheus-client = "==0.16.0"
-APScheduler = "==3.10.0"
+APScheduler = "==3.10.1"
 
 [dev-packages]
 
