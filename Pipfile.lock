@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a71634eb8fa9e97d7b3889dc2de8be35187f1861a75ae3183275c39a184186f0"
+            "sha256": "03ae576a8575bbf8d18cfa62488024fea55749cea2feafd9779bcd901d20383b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,19 +26,19 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:09929b24aaec4951e435d53d31f800e2ca52244af049dc11e5385ce062e106e9",
-                "sha256:e819812f16fab46fadf9b2853a46aaa126e108e7f038502dde555ebbbfc80133"
+                "sha256:619022059e255731f33cd9fe083b8fd62406efcbc07dc15660037bcaa1ba1255",
+                "sha256:9f156f4da4b0a15924196e1a8e3439d1b99cd4a463588e4bb103d1cfaf5618fa"
             ],
             "index": "pypi",
-            "version": "==1.26.89"
+            "version": "==1.26.94"
         },
         "botocore": {
             "hashes": [
-                "sha256:ac8da651f73a9d5759cf5d80beba68deda407e56aaaeb10d249fd557459f3b56",
-                "sha256:b757e59feca82ac62934f658918133116b4535cf66f1d72ff4935fa24e522527"
+                "sha256:01b9e066b9eea719ee852e91841b92c7371f6bd388cf6186b5d55508e0f7fa1b",
+                "sha256:3748b79e6fc95c19d890aa7439a53b9d468a4c4918439b2ba5cc3c13bfaff817"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.29.89"
+            "version": "==1.29.94"
         },
         "bottle": {
             "hashes": [
@@ -356,11 +356,11 @@
         },
         "tzlocal": {
             "hashes": [
-                "sha256:89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745",
-                "sha256:ee5842fa3a795f023514ac2d801c4a81d1743bbe642e3940143326b3a00addd7"
+                "sha256:3f21d09e1b2aa9f2dacca12da240ca37de3ba5237a93addfd6d593afe9073355",
+                "sha256:b44c4388f3d34f25862cfbb387578a4d70fec417649da694a132f628a23367e2"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==4.2"
+            "markers": "python_version >= '3.7'",
+            "version": "==4.3"
         },
         "urllib3": {
             "hashes": [
