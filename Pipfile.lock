@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c0fbb55a9b74b7a6050b97ae1eb3725b1ca6abed056fa70c9a6e92a6c2f11e07"
+            "sha256": "9543f58f42fdaccc75805994b0e8156393183427838c8ee751160868ec24d40a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,19 +26,19 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:308c5a8293d9b76e74921f4d945be19cc467b92e5f128df1db76e31c71345bb3",
-                "sha256:bcd09f16bdf3d71ab7d0fab20e97242f09c63f4cea0943329521ab35a950f900"
+                "sha256:a1c48674c2ff25ddced599c51d14ba7a6dbe9fd51641e8d63a6887bebd9712d7",
+                "sha256:d388cb7f54f1a3056f91ffcfb5cf18b226454204e5df7a5c10774718c3fbb166"
             ],
             "index": "pypi",
-            "version": "==1.26.104"
+            "version": "==1.26.109"
         },
         "botocore": {
             "hashes": [
-                "sha256:7e7a01cef10b1daa9cb01ec25a15e831e7359fc43d1b591359710f203c3620a8",
-                "sha256:932bfbf580a2ae53f471df4bfbebce531985ee27468cf7c37d7ccfb3cf8bc9e4"
+                "sha256:2e449525f0ccedb31fdb962a77caac48b4c486c23515b84c5989a39a1823a024",
+                "sha256:cf43dddb7e2ba5425fe19fad68b10043307b61d9103d06566f1ab6034e38b8db"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.29.104"
+            "version": "==1.29.109"
         },
         "bottle": {
             "hashes": [
@@ -147,11 +147,11 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:357ff22a75b4c0f6093470f21816a825d2adee398177569824e37b6c10069e19",
-                "sha256:8f379b46bad381ad2a0b989dfb0c13ad28d3c2a79f27348213f8946a1d15d55a"
+                "sha256:295c80ebb95eac74003c07a696cf3ef6b414e9230ae8894f3843f8215fd2aa56",
+                "sha256:544536a43d44dff0f64222e4d027d124989fcb9c10979687e589e1694fba9c94"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
-            "version": "==2.17.1"
+            "version": "==2.17.2"
         },
         "idna": {
             "hashes": [
