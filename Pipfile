@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-boto3 = "==1.26.109"
+boto3 = "==1.26.114"
 bottle = "==0.12.25"
 kubernetes = "==26.1.0"
 prometheus-client = "==0.16.0"
