@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3efb822731d0941e00682729f7e8776180a63947f7fbe43cf63c8ba347d4c090"
+            "sha256": "ed08327f2c9eaf264f5e7995e806ae96e3c973fcc8d95763013c67a2651b3c9b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,19 +26,19 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:5218869eddeeb70efead1dd01037c3553dc7b268de3b80a0c3a2baeec2b97fc9",
-                "sha256:d12643d6c18caa79b385a0c4251698391da7a6f5ffa0879b4c10c5d64e5c8b31"
+                "sha256:9e7242b9059d937f34264125fecd844cb5e01acce6be093f6c44869fdf7c6e30",
+                "sha256:fa85b67147c8dc99b6e7c699fc086103f958f9677db934f70659e6e6a72a818c"
             ],
             "index": "pypi",
-            "version": "==1.26.160"
+            "version": "==1.26.165"
         },
         "botocore": {
             "hashes": [
-                "sha256:15d38dae978aba829daaf8d1b02ba2f2b73d4c1e4edc75234163d65a1328c1b5",
-                "sha256:dacf41787978c0d550321d334e0001a488145200f8a6c9bd893fb8e281b25cf7"
+                "sha256:6f35d59e230095aed7cd747604fe248fa384bebb7d09549077892f936a8ca3df",
+                "sha256:988b948be685006b43c4bbd8f5c0cb93e77c66deb70561994e0c5b31b5a67210"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.29.160"
+            "version": "==1.29.165"
         },
         "bottle": {
             "hashes": [
@@ -147,11 +147,11 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:030af34138909ccde0fbce611afc178f1d65d32fbff281f25738b1fe1c6f3eaa",
-                "sha256:23b7b0950fcda519bfb6692bf0d5289d2ea49fc143717cc7188458ec620e63fa"
+                "sha256:b28e8048e57727e7cf0e5bd8e7276b212aef476654a09511354aa82753b45c66",
+                "sha256:da3f18d074fa0f5a7061d99b9af8cee3aa6189c987af7c1b07d94566b6b11268"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2.20.0"
+            "version": "==2.21.0"
         },
         "idna": {
             "hashes": [
