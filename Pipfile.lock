@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "dadd924683a610b42cc30ff183babefbc5afe475e65206a25595857982a89b98"
+            "sha256": "c8c2c4b1bdd0f6f8a51b981aee2056b3195b594f54cc0203cd463ce126db6347"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -34,11 +34,11 @@
         },
         "botocore": {
             "hashes": [
-                "sha256:4c9c58ae286a2ca1f900c9bce285b9efd1f0401648aa54a5026c93ada63ad897",
-                "sha256:62e954b8eb9a404510dd97c4fdfaae25bd0349213a3cd70e937e0634821342f5"
+                "sha256:2aa27c75e62bfcf7900cb85283228fcb7df0fa1bdc2ae76dcee90788dd444934",
+                "sha256:744ce853cadc7ae87ba42ef6828194ddec97d606dd4d08b4dfe3d96d5001eb0c"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.31.1"
+            "version": "==1.31.3"
         },
         "bottle": {
             "hashes": [
@@ -147,11 +147,11 @@
         },
         "google-auth": {
             "hashes": [
-                "sha256:b28e8048e57727e7cf0e5bd8e7276b212aef476654a09511354aa82753b45c66",
-                "sha256:da3f18d074fa0f5a7061d99b9af8cee3aa6189c987af7c1b07d94566b6b11268"
+                "sha256:164cba9af4e6e4e40c3a4f90a1a6c12ee56f14c0b4868d1ca91b32826ab334ce",
+                "sha256:d61d1b40897407b574da67da1a833bdc10d5a11642566e506565d1b1a46ba873"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2.21.0"
+            "version": "==2.22.0"
         },
         "idna": {
             "hashes": [
@@ -187,11 +187,11 @@
         },
         "prometheus-client": {
             "hashes": [
-                "sha256:9c3b26f1535945e85b8934fb374678d263137b78ef85f305b1156c7c881cd11b",
-                "sha256:a77b708cf083f4d1a3fb3ce5c95b4afa32b9c521ae363354a4a910204ea095ce"
+                "sha256:21e674f39831ae3f8acde238afd9a27a37d0d2fb5a28ea094f0ce25d2cbf2091",
+                "sha256:e537f37160f6807b8202a6fc4764cdd19bac5480ddd3e0d463c3002b34462101"
             ],
             "index": "pypi",
-            "version": "==0.17.0"
+            "version": "==0.17.1"
         },
         "pyasn1": {
             "hashes": [
