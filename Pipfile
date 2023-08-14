@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-boto3 = "==1.26.84"
+boto3 = "==1.28.20"
 bottle = "==0.12.25"
-kubernetes = "==26.1.0"
-prometheus-client = "==0.16.0"
+kubernetes = "==27.2.0"
+prometheus-client = "==0.17.1"
 APScheduler = "==3.10.1"
 
 [dev-packages]
