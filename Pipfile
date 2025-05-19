@@ -7,7 +7,7 @@ name = "pypi"
 boto3 = "==1.38.18"
 bottle = "==0.13.3"
 kubernetes = "==32.0.1"
-prometheus-client = "==0.21.1"
+prometheus-client = "==0.22.0"
 APScheduler = "==3.10.4"
 
 [dev-packages]
