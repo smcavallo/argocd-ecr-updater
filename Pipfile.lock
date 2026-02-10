@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "666bc1dce5a4727c344a62cf2fff2f254d8b03e1970c3773b29f9b619e68b2e8"
+            "sha256": "e5669c94ef614639bbe5e3ded37a5db66db6b4e02a7084eb10144720e126d5e2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -26,20 +26,20 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:ba9cd2f7819637d15bfbeb63af4c567fcc8a7dcd7b93dd12734ec58601169538",
-                "sha256:d7e548bea65e0ae2c465c77de937bc686b591aee6a352d5a19a16bc751e591c1"
+                "sha256:32e995b0d56e19422cff22f586f698e8924c792eb00943de9c517ff4607e4e18",
+                "sha256:d5601ea520d30674c1d15791a1f98b5c055e973c775e1d9952ccc09ee5913c4e"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==1.42.30"
+            "version": "==1.42.44"
         },
         "botocore": {
             "hashes": [
-                "sha256:97070a438cac92430bb7b65f8ebd7075224f4a289719da4ee293d22d1e98db02",
-                "sha256:9bf1662b8273d5cc3828a49f71ca85abf4e021011c1f0a71f41a2ea5769a5116"
+                "sha256:47ba27360f2afd2c2721545d8909217f7be05fdee16dd8fc0b09589535a0701c",
+                "sha256:ba406b9243a20591ee87d53abdb883d46416705cebccb639a7f1c923f9dd82df"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==1.42.30"
+            "version": "==1.42.44"
         },
         "bottle": {
             "hashes": [
@@ -209,11 +209,11 @@
         },
         "jmespath": {
             "hashes": [
-                "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980",
-                "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"
+                "sha256:472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d",
+                "sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==1.0.1"
+            "markers": "python_version >= '3.9'",
+            "version": "==1.1.0"
         },
         "kubernetes": {
             "hashes": [
